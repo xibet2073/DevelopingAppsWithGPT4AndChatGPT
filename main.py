@@ -3,7 +3,7 @@ import os
 
 def chat_with_gpt3():
     # Read the OpenAI API key from a file
-    with open('/home/marco/PycharmProjects/DevelopingAppsWithGPT4AndChatGPT/api_key.txt', 'r') as f:
+    with open('api_key.txt', 'r') as f:
         api_key = f.read().strip()
 
     # Set the OpenAI API key
