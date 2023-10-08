@@ -1,13 +1,13 @@
+from dotenv import load_dotenv
+load_dotenv()
 import openai
 import os
 
 def chat_with_gpt3():
-    # Read the OpenAI API key from a file
-    with open('api_key.txt', 'r') as f:
-        api_key = f.read().strip()
 
-    # Set the OpenAI API key
-    openai.api_key = api_key
+    # Load the .env file to get OpenAI key
+    load_dotenv("api_key.env")
+    openai.api_key = os.getenv("OPENAI_API_KEY")
 
     # Call the ChatCompletion endpoint
     response = openai.ChatCompletion.create(
